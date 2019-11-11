@@ -1,0 +1,14 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ArduinoNano
+D Socket for Arduino Nano
+K Arduino MPU Shield
+F https://store.arduino.cc/arduino-nano
+$ENDCMP
+#
+$CMP Piezo
+D Piezo
+K Piezo
+$ENDCMP
+#
+#End Doc Library

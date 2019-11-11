@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkImage" id="imgClear">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-clear</property>
+  </object>
+  <object class="GtkImage" id="imgRefresh">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-refresh</property>
+  </object>
+  <object class="GtkImage" id="imgStart">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-media-play</property>
+  </object>
+  <object class="GtkImage" id="imgStop">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-media-stop</property>
+  </object>
+  <object class="GtkTextTagTable" id="ttblLog">
+    <child type="tag">
+      <object class="GtkTextTag" id="ttagError">
+        <property name="name">error</property>
+        <property name="foreground_rgba">rgb(239,41,41)</property>
+        <property name="font">Normal</property>
+        <property name="scale">0.80000000000000004</property>
+      </object>
+    </child>
+    <child type="tag">
+      <object class="GtkTextTag" id="ttagWarning">
+        <property name="name">warning</property>
+        <property name="foreground_rgba">rgb(252,233,79)</property>
+        <property name="font">Normal</property>
+        <property name="scale">0.80000000000000004</property>
+      </object>
+    </child>
+    <child type="tag">
+      <object class="GtkTextTag" id="ttagPrimary">
+        <property name="name">primary</property>
+        <property name="foreground_rgba">rgb(114,159,207)</property>
+        <property name="font">Normal</property>
+        <property name="scale">0.80000000000000004</property>
+      </object>
+    </child>
+    <child type="tag">
+      <object class="GtkTextTag" id="ttagSecondary">
+        <property name="name">secondary</property>
+        <property name="foreground_rgba">rgb(186,189,182)</property>
+        <property name="font">Normal</property>
+        <property name="scale">0.80000000000000004</property>
+      </object>
+    </child>
+    <child type="tag">
+      <object class="GtkTextTag" id="ttagDefault">
+        <property name="name">default</property>
+        <property name="font">Normal</property>
+        <property name="scale">0.80000000000000004</property>
+      </object>
+    </child>
+  </object>
+  <object class="GtkTextBuffer" id="txtLogBuffer">
+    <property name="tag_table">ttblLog</property>
+  </object>
+  <object class="GtkWindow" id="pnlMain">
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">Arduino DrumKit</property>
+    <property name="window_position">center</property>
+    <property name="icon_name">audio-x-generic</property>
+    <child>
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="margin_left">10</property>
+        <property name="margin_right">10</property>
+        <property name="margin_top">10</property>
+        <property name="margin_bottom">10</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin_bottom">10</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">5</property>
+            <child>
+              <object class="GtkBox">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkEntry" id="txtName">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="placeholder_text" translatable="yes">Name</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkComboBoxText" id="cboDevice">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="has_entry">True</property>
+                    <child internal-child="entry">
+                      <object class="GtkEntry">
+                        <property name="can_focus">False</property>
+                        <property name="placeholder_text" translatable="yes">Device</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btnRefreshDevice">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="tooltip_text" translatable="yes">Refresh</property>
+                    <property name="image">imgRefresh</property>
+                    <property name="always_show_image">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkComboBoxText" id="cboBaudRate">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="has_entry">True</property>
+                    <child internal-child="entry">
+                      <object class="GtkEntry">
+                        <property name="can_focus">False</property>
+                        <property name="placeholder_text" translatable="yes">Baud Rate</property>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">3</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btnStartStop">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="receives_default">True</property>
+                    <property name="tooltip_text" translatable="yes">Start/Stop</property>
+                    <property name="image">imgStart</property>
+                    <property name="always_show_image">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">4</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkCheckButton" id="chkDebug">
+                <property name="label" translatable="yes">Debug/Callibration only (Do not create Midi ports)</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="halign">start</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="margin_bottom">10</property>
+            <property name="shadow_type">in</property>
+            <property name="min_content_height">100</property>
+            <child>
+              <object class="GtkTextView" id="txtLog">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="editable">False</property>
+                <property name="cursor_visible">False</property>
+                <property name="buffer">txtLogBuffer</property>
+                <property name="monospace">True</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="halign">end</property>
+            <child>
+              <object class="GtkButton" id="btnClear">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Clear</property>
+                <property name="image">imgClear</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
